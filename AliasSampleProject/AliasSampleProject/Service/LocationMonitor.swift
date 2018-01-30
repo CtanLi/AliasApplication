@@ -55,7 +55,6 @@ class LocationMonitor: NSObject, CLLocationManagerDelegate {
             if let location = locations.last {
                 stopMonitoring()
                 currentLocation = location
-                debugPrint(location.coordinate.latitude)
                 self.delegate?.updateLocation()
             }
         }

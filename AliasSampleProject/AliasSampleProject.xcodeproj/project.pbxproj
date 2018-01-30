@@ -144,14 +144,14 @@
 		469BA76B2020200B00F7FC60 /* AliasSampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				469BA7BB20211E9800F7FC60 /* Storyboard */,
+				469BA7BA20211E7900F7FC60 /* AppDelegate */,
 				469BA7B32020C07900F7FC60 /* Views */,
 				469BA7AD20208E4700F7FC60 /* Extension */,
 				469BA7A920208D5E00F7FC60 /* Controllers */,
 				469BA7A620208B0C00F7FC60 /* Constants */,
 				469BA79D2020296D00F7FC60 /* Model */,
 				469BA79A202028B100F7FC60 /* Service */,
-				469BA76C2020200B00F7FC60 /* AppDelegate.swift */,
-				469BA7702020200B00F7FC60 /* Main.storyboard */,
 				469BA7732020200B00F7FC60 /* Assets.xcassets */,
 				469BA7752020200B00F7FC60 /* LaunchScreen.storyboard */,
 				469BA7782020200B00F7FC60 /* Info.plist */,
@@ -244,6 +244,22 @@
 				469BA7B62020C0C200F7FC60 /* GroceryStoresCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		469BA7BA20211E7900F7FC60 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				469BA76C2020200B00F7FC60 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		469BA7BB20211E9800F7FC60 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				469BA7702020200B00F7FC60 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		7F31143A3607BF45BC7C2918 /* Pods */ = {

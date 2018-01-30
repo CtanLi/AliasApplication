@@ -62,7 +62,7 @@ class Business: NSObject {
     // MARK:- implementations
     //
     
-    class func searchWithTerm(parameters: [String : AnyObject], completion: @escaping ([Business]) -> Void) {
-        YelpApiManager.sharedUInstance.searchWithTerm(parameters, completion: completion)
+    class func searchWithParams(parameters: [String : AnyObject], completion: @escaping ([Business]) -> Void) {
+        YelpApiManager.sharedInstance.searchWithParams(parameters, completion: completion)
     }
 }

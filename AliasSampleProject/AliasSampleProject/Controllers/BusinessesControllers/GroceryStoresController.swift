@@ -51,8 +51,8 @@ class GroceryStoresController: UIViewController, UITableViewDelegate, UITableVie
     func updateLocation() {
         print("locations = \(location.currentLocation?.coordinate.latitude ?? 0), \(location.currentLocation?.coordinate.longitude ?? 0)")
         let userCurrentLocation = ("\(location.currentLocation?.coordinate.latitude ?? 0), \(location.currentLocation?.coordinate.longitude ?? 0)")
-        let parameters: [String : AnyObject] = ["term": "Grocery Store" as AnyObject, "location": userCurrentLocation as AnyObject]
-        Business.searchWithTerm(parameters: parameters, completion: { (businesses: [Business]?) -> Void in
+        let parameters: [String : AnyObject] = ["params": "Grocery Store" as AnyObject, "location": userCurrentLocation as AnyObject]
+        Business.searchWithParams(parameters: parameters, completion: { (businesses: [Business]?) -> Void in
             self.businesses = businesses!
         })
     }

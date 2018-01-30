@@ -12,13 +12,13 @@ import SwiftyJSON
 
 class YelpApiManager: NSObject {
     
-    static let sharedUInstance = YelpApiManager()
+    static let sharedInstance = YelpApiManager()
     
     //
     // MARK:- implementations
     //
     
-    func searchWithTerm(_ parameters: [String : AnyObject], completion: @escaping ([Business]) -> Void) {
+    func searchWithParams(_ parameters: [String : AnyObject], completion: @escaping ([Business]) -> Void) {
         getRequestValues(parameters, completion: completion)
     }
     
