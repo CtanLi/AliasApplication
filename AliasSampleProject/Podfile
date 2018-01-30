@@ -8,6 +8,7 @@ target 'AliasSampleProject' do
   # Pods for AliasSampleProject
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Font-Awesome-Swift', '~> 1.7.2'
 
   target 'AliasSampleProjectTests' do
     inherit! :search_paths

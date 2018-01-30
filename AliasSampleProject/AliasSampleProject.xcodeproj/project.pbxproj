@@ -9,12 +9,22 @@
 /* Begin PBXBuildFile section */
 		0044DE8FEA970B9098CFF430 /* Pods_AliasSampleProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3CB5F3C1E350294A4B63D6 /* Pods_AliasSampleProjectTests.framework */; };
 		469BA76D2020200B00F7FC60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA76C2020200B00F7FC60 /* AppDelegate.swift */; };
-		469BA76F2020200B00F7FC60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA76E2020200B00F7FC60 /* ViewController.swift */; };
+		469BA76F2020200B00F7FC60 /* RestaurantsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA76E2020200B00F7FC60 /* RestaurantsController.swift */; };
 		469BA7722020200B00F7FC60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469BA7702020200B00F7FC60 /* Main.storyboard */; };
 		469BA7742020200B00F7FC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469BA7732020200B00F7FC60 /* Assets.xcassets */; };
 		469BA7772020200B00F7FC60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469BA7752020200B00F7FC60 /* LaunchScreen.storyboard */; };
 		469BA7822020200B00F7FC60 /* AliasSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7812020200B00F7FC60 /* AliasSampleProjectTests.swift */; };
 		469BA78D2020200B00F7FC60 /* AliasSampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA78C2020200B00F7FC60 /* AliasSampleProjectUITests.swift */; };
+		469BA79C202028DD00F7FC60 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA79B202028DD00F7FC60 /* ApiManager.swift */; };
+		469BA79F2020298300F7FC60 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA79E2020298300F7FC60 /* Business.swift */; };
+		469BA7A12020338C00F7FC60 /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7A02020338B00F7FC60 /* LocationMonitor.swift */; };
+		469BA7A820208B3700F7FC60 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7A720208B3700F7FC60 /* GlobalConstants.swift */; };
+		469BA7AC20208E0000F7FC60 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7AB20208E0000F7FC60 /* TabBarController.swift */; };
+		469BA7AF20208E5B00F7FC60 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7AE20208E5B00F7FC60 /* Extensions.swift */; };
+		469BA7B22020917E00F7FC60 /* GroceryStoresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7B12020917E00F7FC60 /* GroceryStoresController.swift */; };
+		469BA7B52020C0A500F7FC60 /* RestaurantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7B42020C0A500F7FC60 /* RestaurantsCell.swift */; };
+		469BA7B72020C0C200F7FC60 /* GroceryStoresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7B62020C0C200F7FC60 /* GroceryStoresCell.swift */; };
+		469BA7B92020EA9300F7FC60 /* BusinessDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7B82020EA9300F7FC60 /* BusinessDetailController.swift */; };
 		892A7162AC31571BBA0496CF /* Pods_AliasSampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B8D44C6AE71E8945D51155 /* Pods_AliasSampleProject.framework */; };
 		AA98FAEAAF6C62355D29D7FF /* Pods_AliasSampleProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDAA245047A4534FA6329A1 /* Pods_AliasSampleProjectUITests.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +52,7 @@
 		2E3CB5F3C1E350294A4B63D6 /* Pods_AliasSampleProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliasSampleProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		469BA7692020200B00F7FC60 /* AliasSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliasSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469BA76C2020200B00F7FC60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		469BA76E2020200B00F7FC60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		469BA76E2020200B00F7FC60 /* RestaurantsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsController.swift; sourceTree = "<group>"; };
 		469BA7712020200B00F7FC60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469BA7732020200B00F7FC60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469BA7762020200B00F7FC60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +63,16 @@
 		469BA7882020200B00F7FC60 /* AliasSampleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliasSampleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		469BA78C2020200B00F7FC60 /* AliasSampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasSampleProjectUITests.swift; sourceTree = "<group>"; };
 		469BA78E2020200B00F7FC60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469BA79B202028DD00F7FC60 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		469BA79E2020298300F7FC60 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		469BA7A02020338B00F7FC60 /* LocationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
+		469BA7A720208B3700F7FC60 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		469BA7AB20208E0000F7FC60 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		469BA7AE20208E5B00F7FC60 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		469BA7B12020917E00F7FC60 /* GroceryStoresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryStoresController.swift; sourceTree = "<group>"; };
+		469BA7B42020C0A500F7FC60 /* RestaurantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsCell.swift; sourceTree = "<group>"; };
+		469BA7B62020C0C200F7FC60 /* GroceryStoresCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryStoresCell.swift; sourceTree = "<group>"; };
+		469BA7B82020EA9300F7FC60 /* BusinessDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailController.swift; sourceTree = "<group>"; };
 		46E24A1C9A60F14635F2E9D0 /* Pods-AliasSampleProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliasSampleProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliasSampleProjectTests/Pods-AliasSampleProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60B8D44C6AE71E8945D51155 /* Pods_AliasSampleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliasSampleProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDAA245047A4534FA6329A1 /* Pods_AliasSampleProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliasSampleProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,8 +144,13 @@
 		469BA76B2020200B00F7FC60 /* AliasSampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				469BA7B32020C07900F7FC60 /* Views */,
+				469BA7AD20208E4700F7FC60 /* Extension */,
+				469BA7A920208D5E00F7FC60 /* Controllers */,
+				469BA7A620208B0C00F7FC60 /* Constants */,
+				469BA79D2020296D00F7FC60 /* Model */,
+				469BA79A202028B100F7FC60 /* Service */,
 				469BA76C2020200B00F7FC60 /* AppDelegate.swift */,
-				469BA76E2020200B00F7FC60 /* ViewController.swift */,
 				469BA7702020200B00F7FC60 /* Main.storyboard */,
 				469BA7732020200B00F7FC60 /* Assets.xcassets */,
 				469BA7752020200B00F7FC60 /* LaunchScreen.storyboard */,
@@ -150,6 +175,75 @@
 				469BA78E2020200B00F7FC60 /* Info.plist */,
 			);
 			path = AliasSampleProjectUITests;
+			sourceTree = "<group>";
+		};
+		469BA79A202028B100F7FC60 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				469BA79B202028DD00F7FC60 /* ApiManager.swift */,
+				469BA7A02020338B00F7FC60 /* LocationMonitor.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		469BA79D2020296D00F7FC60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				469BA79E2020298300F7FC60 /* Business.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		469BA7A620208B0C00F7FC60 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				469BA7A720208B3700F7FC60 /* GlobalConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		469BA7A920208D5E00F7FC60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				469BA7B02020915600F7FC60 /* BusinessesControllers */,
+				469BA7AA20208D8600F7FC60 /* TabBarController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		469BA7AA20208D8600F7FC60 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				469BA7AB20208E0000F7FC60 /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		469BA7AD20208E4700F7FC60 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				469BA7AE20208E5B00F7FC60 /* Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		469BA7B02020915600F7FC60 /* BusinessesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				469BA76E2020200B00F7FC60 /* RestaurantsController.swift */,
+				469BA7B12020917E00F7FC60 /* GroceryStoresController.swift */,
+				469BA7B82020EA9300F7FC60 /* BusinessDetailController.swift */,
+			);
+			path = BusinessesControllers;
+			sourceTree = "<group>";
+		};
+		469BA7B32020C07900F7FC60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				469BA7B42020C0A500F7FC60 /* RestaurantsCell.swift */,
+				469BA7B62020C0C200F7FC60 /* GroceryStoresCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7F31143A3607BF45BC7C2918 /* Pods */ = {
@@ -411,11 +505,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AliasSampleProject/Pods-AliasSampleProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Font-Awesome-Swift/Font_Awesome_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Font_Awesome_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +556,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469BA76F2020200B00F7FC60 /* ViewController.swift in Sources */,
+				469BA7B92020EA9300F7FC60 /* BusinessDetailController.swift in Sources */,
+				469BA76F2020200B00F7FC60 /* RestaurantsController.swift in Sources */,
+				469BA79F2020298300F7FC60 /* Business.swift in Sources */,
+				469BA7B22020917E00F7FC60 /* GroceryStoresController.swift in Sources */,
+				469BA7A12020338C00F7FC60 /* LocationMonitor.swift in Sources */,
+				469BA7AF20208E5B00F7FC60 /* Extensions.swift in Sources */,
+				469BA7B72020C0C200F7FC60 /* GroceryStoresCell.swift in Sources */,
+				469BA79C202028DD00F7FC60 /* ApiManager.swift in Sources */,
+				469BA7AC20208E0000F7FC60 /* TabBarController.swift in Sources */,
+				469BA7A820208B3700F7FC60 /* GlobalConstants.swift in Sources */,
+				469BA7B52020C0A500F7FC60 /* RestaurantsCell.swift in Sources */,
 				469BA76D2020200B00F7FC60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
