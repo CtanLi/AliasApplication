@@ -51,7 +51,7 @@ class RestaurantsController: UIViewController, UpdateLocationDelegate, UITableVi
     func updateLocation() {
         let userCurrentLocation = ("\(location.currentLocation?.coordinate.latitude ?? 0), \(location.currentLocation?.coordinate.longitude ?? 0)")
         let parameters: [String : AnyObject] = ["term": "Restaurants" as AnyObject, "location": userCurrentLocation as AnyObject]
-        Restaurants.searchWithParams(parameters: parameters, completion: { (businesses: [Restaurants]?) -> Void in
+        Restaurants.searchWithRestaurantsParams(parameters: parameters, completion: { (businesses: [Restaurants]?) -> Void in
             self.restaurants = businesses!
         })
     }

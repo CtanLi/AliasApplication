@@ -62,7 +62,7 @@ class Restaurants: NSObject {
     // MARK:- implementations
     //
     
-    class func searchWithParams(parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> Void) {
-        YelpApiManager.sharedInstance.searchWithParams(parameters, completion: completion)
+    class func searchWithRestaurantsParams(parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> Void) {
+        YelpApiManager.sharedInstance.searchWithRestaurantsParams(parameters, completion: completion)
     }
 }

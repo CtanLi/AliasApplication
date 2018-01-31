@@ -19,11 +19,11 @@ class YelpApiManager: NSObject {
     //
     
     // restaurants api call
-    func searchWithParams(_ parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> Void) {
-        getRequestValues(parameters, completion: completion)
+    func searchWithRestaurantsParams(_ parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> Void) {
+        getRestaurantsValues(parameters, completion: completion)
     }
     
-    func getRequestValues(_ parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> ()) {
+    func getRestaurantsValues(_ parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> ()) {
         let httpHeaders: HTTPHeaders = ["Authorization": "Bearer \(GlobalConstants.Constants.apiKey)"]
         Alamofire.request(GlobalConstants.Constants.apiUrl, method: .get,
                           parameters: parameters,
