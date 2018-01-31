@@ -15,7 +15,8 @@ class BusinessDetailController: UIViewController {
     //
     
     // vars
-    var getDetailsObject: Business!
+    var getGroceryStoresDetails: GroceryStores!
+    var getRestaurantDetails: Restaurants!
     
     @IBOutlet weak var businessDetailImage: UIImageView! {
         didSet{
@@ -52,13 +53,15 @@ class BusinessDetailController: UIViewController {
     //
     
     func updateDtailPageWithBusinessObjects() {
-        navigationItem.title = getDetailsObject.name
-        businessDetailImage.loadImageUsingCacheWithURLString(urlString: getDetailsObject.imageURL)
-        businessDetailLocation.text = "\(getDetailsObject.country + ", " + getDetailsObject.state + " " + getDetailsObject.city)"
-        busineesDetailPhone.text = getDetailsObject.phone
-        businessDetailStarRating.text = "\(getDetailsObject.rating)"
-        businessDetailReviewCount.text = "\(getDetailsObject.reviewCount)"
-        businessStatus.text = String(describing: getDetailsObject.isClosed)
+        getRestaurantDetails != nil ? (navigationItem.title = getRestaurantDetails.name) : (navigationItem.title = getGroceryStoresDetails.name)
+        getRestaurantDetails != nil ? (businessDetailImage.loadImageUsingCacheWithURLString(urlString: getRestaurantDetails.imageURL)) :
+        (businessDetailImage.loadImageUsingCacheWithURLString(urlString: getGroceryStoresDetails.imageURL))
+        getRestaurantDetails != nil ? (businessDetailLocation.text = "\(getRestaurantDetails.country + ", " + getRestaurantDetails.state + " " + getRestaurantDetails.city)") :
+        (businessDetailLocation.text = "\(getGroceryStoresDetails.country + ", " + getGroceryStoresDetails.state + " " + getGroceryStoresDetails.city)")
+        getRestaurantDetails != nil ? (busineesDetailPhone.text = getRestaurantDetails.phone) : (busineesDetailPhone.text = getGroceryStoresDetails.phone)
+        getRestaurantDetails != nil ? (businessDetailStarRating.text = "\(getRestaurantDetails.rating)") : (businessDetailStarRating.text = "\(getGroceryStoresDetails.rating)")
+        getRestaurantDetails != nil ? (businessDetailReviewCount.text = "\(getRestaurantDetails.reviewCount)") : (businessDetailReviewCount.text = "\(getGroceryStoresDetails.reviewCount)")
+        getRestaurantDetails != nil ? (businessStatus.text = String(describing: getRestaurantDetails.isClosed)) : (businessStatus.text = String(describing: getGroceryStoresDetails.isClosed))
     }
     
     //

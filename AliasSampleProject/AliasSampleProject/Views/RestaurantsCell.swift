@@ -22,13 +22,13 @@ class RestaurantsCell: UITableViewCell, Reusable {
     @IBOutlet weak var restaurantRating: UILabel!
 
     // data
-    var business: Business! {
+    var restaurants: Restaurants! {
         didSet {
-            restaurantImage.loadImageUsingCacheWithURLString(urlString: business.imageURL)
-            restaurantName.text = business.name
-            restaurantLocation.text = "\(business.country + ", " + business.state + " " + business.city)"
-            restaurantPhone.text = business.phone
-            restaurantRating.text = "\(business.rating)"
+            restaurantImage.loadImageUsingCacheWithURLString(urlString: restaurants.imageURL)
+            restaurantName.text = restaurants.name
+            restaurantLocation.text = "\(restaurants.country + ", " + restaurants.state + " " + restaurants.city)"
+            restaurantPhone.text = restaurants.phone
+            restaurantRating.text = "\(restaurants.rating)"
         }
     }
     

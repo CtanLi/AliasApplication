@@ -18,19 +18,23 @@ class YelpApiManager: NSObject {
     // MARK:- implementations
     //
     
-    func searchWithParams(_ parameters: [String : AnyObject], completion: @escaping ([Business]) -> Void) {
+    // restaurants api call
+    func searchWithParams(_ parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> Void) {
         getRequestValues(parameters, completion: completion)
     }
     
-    func getRequestValues(_ parameters: [String : AnyObject], completion: @escaping ([Business]) -> ()) {
+    func getRequestValues(_ parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> ()) {
         let httpHeaders: HTTPHeaders = ["Authorization": "Bearer \(GlobalConstants.Constants.apiKey)"]
-        Alamofire.request(GlobalConstants.Constants.apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: httpHeaders).responseJSON { (responseObject) in
+        Alamofire.request(GlobalConstants.Constants.apiUrl, method: .get,
+                          parameters: parameters,
+                          encoding: URLEncoding.default,
+                          headers: httpHeaders).responseJSON { (responseObject) in
             if responseObject.result.isSuccess {
                 let response = JSON(responseObject.result.value ?? "")
                 //success(resJson)
                 let dictionaries = response["businesses"].arrayObject
                 if dictionaries != nil {
-                    completion(Business.businesses(array: dictionaries as! [NSDictionary]))
+                    completion(Restaurants.businesses(array: dictionaries as! [NSDictionary]))
                 }
             }
             if responseObject.result.isFailure {
@@ -39,5 +43,31 @@ class YelpApiManager: NSObject {
             }
         }
     }
+    
+    // groceryStores api call
+    func searchWithGroceryStoresParams(_ parameters: [String : AnyObject], completion: @escaping ([GroceryStores]) -> Void) {
+        getGroceryStoresValues(parameters, completion: completion)
+    }
+    
+    func getGroceryStoresValues(_ parameters: [String : AnyObject], completion: @escaping ([GroceryStores]) -> ()) {
+        let httpHeaders: HTTPHeaders = ["Authorization": "Bearer \(GlobalConstants.Constants.apiKey)"]
+        Alamofire.request(GlobalConstants.Constants.apiUrl, method: .get,
+              parameters: parameters,
+              encoding: URLEncoding.default,
+              headers: httpHeaders).responseJSON { (responseObject) in
+                if responseObject.result.isSuccess {
+                    let response = JSON(responseObject.result.value ?? "")
+                    //success(resJson)
+                    let dictionaries = response["businesses"].arrayObject
+                    if dictionaries != nil {
+                        completion(GroceryStores.businesses(array: dictionaries as! [NSDictionary]))
+                    }
+                }
+                if responseObject.result.isFailure {
+                    let error = responseObject.result.error! as NSError
+                    print("Request failed with error: \(error.description)")
+                }
+            }
+        }
 }
 

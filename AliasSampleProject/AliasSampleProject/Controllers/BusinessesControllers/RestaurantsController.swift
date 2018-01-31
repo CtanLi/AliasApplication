@@ -16,8 +16,8 @@ class RestaurantsController: UIViewController, UpdateLocationDelegate, UITableVi
     
     // vars
     private let location = LocationMonitor.SharedManager
-    var selectedCellObject: Business!
-    var businesses = [Business]() {
+    var selectedCellObject: Restaurants!
+    var restaurants = [Restaurants]() {
         didSet {
             restaurantTable.reloadData()
         }
@@ -35,7 +35,7 @@ class RestaurantsController: UIViewController, UpdateLocationDelegate, UITableVi
         location.delegate = self
         restaurantTable.delegate = self
         restaurantTable.dataSource = self
-        businesses.removeAll()
+        restaurants.removeAll()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,26 +50,26 @@ class RestaurantsController: UIViewController, UpdateLocationDelegate, UITableVi
     // get user current Location and make api call
     func updateLocation() {
         let userCurrentLocation = ("\(location.currentLocation?.coordinate.latitude ?? 0), \(location.currentLocation?.coordinate.longitude ?? 0)")
-        let parameters: [String : AnyObject] = ["params": "Restaurants" as AnyObject, "location": userCurrentLocation as AnyObject]
-        Business.searchWithParams(parameters: parameters, completion: { (businesses: [Business]?) -> Void in
-            self.businesses = businesses!
+        let parameters: [String : AnyObject] = ["term": "Restaurants" as AnyObject, "location": userCurrentLocation as AnyObject]
+        Restaurants.searchWithParams(parameters: parameters, completion: { (businesses: [Restaurants]?) -> Void in
+            self.restaurants = businesses!
         })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return businesses.count
+        return restaurants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantsCell.identifier, for: indexPath)
             as! RestaurantsCell
-        cell.business = businesses[indexPath.row]
+        cell.restaurants = restaurants[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RestaurantsCell
-        selectedCellObject = cell.business
+        selectedCellObject = cell.restaurants
         self.performSegue(withIdentifier: GlobalConstants.Constants.showRestaurantDetails, sender: self)
     }
     
@@ -81,7 +81,7 @@ class RestaurantsController: UIViewController, UpdateLocationDelegate, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == GlobalConstants.Constants.showRestaurantDetails) {
             let detailVC = segue.destination as? BusinessDetailController
-            detailVC?.getDetailsObject = selectedCellObject
+            detailVC?.getRestaurantDetails = selectedCellObject
         }
     }
 }

@@ -22,13 +22,13 @@ class GroceryStoresCell: UITableViewCell, Reusable {
     @IBOutlet weak var groceryStoreRating: UILabel!
     
     // data
-    var business: Business! {
+    var groceryStores: GroceryStores! {
         didSet {
-            groceryStoreImage.loadImageUsingCacheWithURLString(urlString: business.imageURL)
-            groceryStoreName.text = business.name
-            groceryStoreLocation.text = "\(business.country + ", " + business.state + " " + business.city)"
-            groceryStorePhone.text = business.phone
-            groceryStoreRating.text = "\(business.rating)"
+            groceryStoreImage.loadImageUsingCacheWithURLString(urlString: groceryStores.imageURL)
+            groceryStoreName.text = groceryStores.name
+            groceryStoreLocation.text = "\(groceryStores.country + ", " + groceryStores.state + " " + groceryStores.city)"
+            groceryStorePhone.text = groceryStores.phone
+            groceryStoreRating.text = "\(groceryStores.rating)"
         }
     }
     

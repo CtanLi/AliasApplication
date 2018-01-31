@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Business: NSObject {
+class Restaurants: NSObject {
     
     //
     // MARK:- properties
@@ -49,20 +49,20 @@ class Business: NSObject {
             imageURL = imageURLString
         }
     
-    class func businesses(array: [NSDictionary]) -> [Business] {
-        var businesses = [Business]()
+    class func businesses(array: [NSDictionary]) -> [Restaurants] {
+        var restaurants = [Restaurants]()
         for dictionary in array {
-            let business = Business(dictionary: dictionary)
-            businesses.append(business)
+            let store = Restaurants(dictionary: dictionary)
+            restaurants.append(store)
         }
-        return businesses
+        return restaurants
     }
     
     //
     // MARK:- implementations
     //
     
-    class func searchWithParams(parameters: [String : AnyObject], completion: @escaping ([Business]) -> Void) {
+    class func searchWithParams(parameters: [String : AnyObject], completion: @escaping ([Restaurants]) -> Void) {
         YelpApiManager.sharedInstance.searchWithParams(parameters, completion: completion)
     }
 }

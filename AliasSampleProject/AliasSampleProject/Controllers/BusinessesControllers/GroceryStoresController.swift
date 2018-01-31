@@ -16,8 +16,8 @@ class GroceryStoresController: UIViewController, UITableViewDelegate, UITableVie
     
     // vars
     private let location = LocationMonitor.SharedManager
-    var selectedCellObject: Business!
-    var businesses = [Business]() {
+    var selectedCellObject: GroceryStores!
+    var groceryStores = [GroceryStores]() {
         didSet {
             groceryStoreTable.reloadData()
         }
@@ -35,7 +35,7 @@ class GroceryStoresController: UIViewController, UITableViewDelegate, UITableVie
         GlobalConstants.updateLocationFlag = false
         location.startMonitoring()
         location.delegate = self
-        businesses.removeAll()
+        groceryStores.removeAll()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,26 +51,26 @@ class GroceryStoresController: UIViewController, UITableViewDelegate, UITableVie
     func updateLocation() {
         print("locations = \(location.currentLocation?.coordinate.latitude ?? 0), \(location.currentLocation?.coordinate.longitude ?? 0)")
         let userCurrentLocation = ("\(location.currentLocation?.coordinate.latitude ?? 0), \(location.currentLocation?.coordinate.longitude ?? 0)")
-        let parameters: [String : AnyObject] = ["params": "Grocery Store" as AnyObject, "location": userCurrentLocation as AnyObject]
-        Business.searchWithParams(parameters: parameters, completion: { (businesses: [Business]?) -> Void in
-            self.businesses = businesses!
+        let parameters: [String : AnyObject] = ["term": "GroceryStores" as AnyObject, "location": userCurrentLocation as AnyObject]
+        GroceryStores.searchWithGroceryStoresParams(parameters: parameters, completion: { (businesses: [GroceryStores]?) -> Void in
+              self.groceryStores = businesses!
         })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return businesses.count
+        return groceryStores.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GroceryStoresCell.identifier, for: indexPath)
             as! GroceryStoresCell
-        cell.business = businesses[indexPath.row]
+        cell.groceryStores = groceryStores[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! GroceryStoresCell
-        selectedCellObject = cell.business
+        selectedCellObject = cell.groceryStores
         self.performSegue(withIdentifier: GlobalConstants.Constants.showGroceryStoresDetails, sender: self)
     }
     
@@ -82,7 +82,7 @@ class GroceryStoresController: UIViewController, UITableViewDelegate, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == GlobalConstants.Constants.showGroceryStoresDetails) {
             let detailVC = segue.destination as? BusinessDetailController
-            detailVC?.getDetailsObject = selectedCellObject
+            detailVC?.getGroceryStoresDetails = selectedCellObject
         }
     }
 }

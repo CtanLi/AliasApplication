@@ -16,7 +16,7 @@
 		469BA7822020200B00F7FC60 /* AliasSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7812020200B00F7FC60 /* AliasSampleProjectTests.swift */; };
 		469BA78D2020200B00F7FC60 /* AliasSampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA78C2020200B00F7FC60 /* AliasSampleProjectUITests.swift */; };
 		469BA79C202028DD00F7FC60 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA79B202028DD00F7FC60 /* ApiManager.swift */; };
-		469BA79F2020298300F7FC60 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA79E2020298300F7FC60 /* Business.swift */; };
+		469BA79F2020298300F7FC60 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA79E2020298300F7FC60 /* Restaurants.swift */; };
 		469BA7A12020338C00F7FC60 /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7A02020338B00F7FC60 /* LocationMonitor.swift */; };
 		469BA7A820208B3700F7FC60 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7A720208B3700F7FC60 /* GlobalConstants.swift */; };
 		469BA7AC20208E0000F7FC60 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7AB20208E0000F7FC60 /* TabBarController.swift */; };
@@ -25,6 +25,7 @@
 		469BA7B52020C0A500F7FC60 /* RestaurantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7B42020C0A500F7FC60 /* RestaurantsCell.swift */; };
 		469BA7B72020C0C200F7FC60 /* GroceryStoresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7B62020C0C200F7FC60 /* GroceryStoresCell.swift */; };
 		469BA7B92020EA9300F7FC60 /* BusinessDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7B82020EA9300F7FC60 /* BusinessDetailController.swift */; };
+		469BA7BD2021FA1E00F7FC60 /* GroceryStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BA7BC2021FA1E00F7FC60 /* GroceryStores.swift */; };
 		892A7162AC31571BBA0496CF /* Pods_AliasSampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B8D44C6AE71E8945D51155 /* Pods_AliasSampleProject.framework */; };
 		AA98FAEAAF6C62355D29D7FF /* Pods_AliasSampleProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDAA245047A4534FA6329A1 /* Pods_AliasSampleProjectUITests.framework */; };
 /* End PBXBuildFile section */
@@ -64,7 +65,7 @@
 		469BA78C2020200B00F7FC60 /* AliasSampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasSampleProjectUITests.swift; sourceTree = "<group>"; };
 		469BA78E2020200B00F7FC60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469BA79B202028DD00F7FC60 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		469BA79E2020298300F7FC60 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		469BA79E2020298300F7FC60 /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		469BA7A02020338B00F7FC60 /* LocationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
 		469BA7A720208B3700F7FC60 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		469BA7AB20208E0000F7FC60 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		469BA7B42020C0A500F7FC60 /* RestaurantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsCell.swift; sourceTree = "<group>"; };
 		469BA7B62020C0C200F7FC60 /* GroceryStoresCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryStoresCell.swift; sourceTree = "<group>"; };
 		469BA7B82020EA9300F7FC60 /* BusinessDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailController.swift; sourceTree = "<group>"; };
+		469BA7BC2021FA1E00F7FC60 /* GroceryStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryStores.swift; sourceTree = "<group>"; };
 		46E24A1C9A60F14635F2E9D0 /* Pods-AliasSampleProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliasSampleProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliasSampleProjectTests/Pods-AliasSampleProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60B8D44C6AE71E8945D51155 /* Pods_AliasSampleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliasSampleProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDAA245047A4534FA6329A1 /* Pods_AliasSampleProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliasSampleProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,7 +191,8 @@
 		469BA79D2020296D00F7FC60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				469BA79E2020298300F7FC60 /* Business.swift */,
+				469BA79E2020298300F7FC60 /* Restaurants.swift */,
+				469BA7BC2021FA1E00F7FC60 /* GroceryStores.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -574,8 +577,9 @@
 			files = (
 				469BA7B92020EA9300F7FC60 /* BusinessDetailController.swift in Sources */,
 				469BA76F2020200B00F7FC60 /* RestaurantsController.swift in Sources */,
-				469BA79F2020298300F7FC60 /* Business.swift in Sources */,
+				469BA79F2020298300F7FC60 /* Restaurants.swift in Sources */,
 				469BA7B22020917E00F7FC60 /* GroceryStoresController.swift in Sources */,
+				469BA7BD2021FA1E00F7FC60 /* GroceryStores.swift in Sources */,
 				469BA7A12020338C00F7FC60 /* LocationMonitor.swift in Sources */,
 				469BA7AF20208E5B00F7FC60 /* Extensions.swift in Sources */,
 				469BA7B72020C0C200F7FC60 /* GroceryStoresCell.swift in Sources */,
